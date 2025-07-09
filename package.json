@@ -14,5 +14,10 @@
 		"typescript": "^5.5.2",
 		"vitest": "~3.2.0",
 		"wrangler": "^4.24.0"
+	},
+	"dependencies": {
+		"@langchain/core": "^0.3.62",
+		"@langchain/textsplitters": "^0.1.0",
+		"@supabase/supabase-js": "^2.50.4"
 	}
 }
