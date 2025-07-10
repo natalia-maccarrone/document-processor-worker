@@ -63,7 +63,8 @@ export default {
 					success: true,
 					document_id: documentId,
 					chunks_processed: chunks.length,
-				})
+				}),
+				{ headers: corsHeaders }
 			);
 		} catch (error: any) {
 			return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: corsHeaders });
