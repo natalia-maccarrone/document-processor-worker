@@ -21,6 +21,13 @@ export default {
 		try {
 			const { document }: { document: string } = await request.json();
 
+			if (document.length > 500) {
+				return new Response(JSON.stringify({ error: 'Document too long. Please limit to 500 characters.' }), {
+					status: 400,
+					headers: corsHeaders,
+				});
+			}
+
 			const chunks = await chunkDocument(document);
 
 			const requestBody = JSON.stringify(chunks);
