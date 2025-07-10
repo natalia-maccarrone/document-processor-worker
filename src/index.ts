@@ -91,9 +91,9 @@ export default {
 
 async function chunkDocument(text: string) {
 	const splitter = new RecursiveCharacterTextSplitter({
-		chunkSize: 500,
-		chunkOverlap: 50,
-		separators: ['\n\n', '\n', '.', '!', '?', ' ', ''],
+		chunkSize: 100,
+		chunkOverlap: 10,
+		separators: ['\n\n', '\n', '. ', '! ', '? ', ', ', ' ', ''],
 	});
 
 	return splitter.splitText(text);
